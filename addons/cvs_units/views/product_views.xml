@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Remplace le label 'Poids (kg)' par 'Poids (g)' dans les produits -->
+    <record id="view_product_form_cvs_units" model="ir.ui.view">
+        <field name="name">product.template.cvs.units</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='weight']" position="attributes">
+                <attribute name="string">Poids (g)</attribute>
+                <attribute name="help">Poids net du produit en grammes</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
